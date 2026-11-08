@@ -1,0 +1,16 @@
+# حزم النوافذ والاعتمادات الضخمة
+node_modules/
+
+# ملفات البناء الخاصة بـ Next.js
+.next/
+out/
+
+# ملفات المتغيرات السرية والبيئة
+.env
+.env.local
+.env.*.local
+.env.example
+
+# ملفات نظام التشغيل المؤقتة
+.DS_Store
+Thumbs.db

@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fffdfd;
+  --color-cream: #f9f1f2;
+  --color-cream-deep: #f3e6e9;
+  --color-blush: #e8c6ce;
+  --color-blush-soft: #f6e7eb;
+  --color-accent: #d9aeb8;
+  --color-mauve: #a26e7c;
+  --color-mauve-deep: #7e505c;
+  --color-ink: #383033;
+  --color-ink-soft: #7a6b70;
+  --color-ink-deep: #2b2427;
+  --color-line: #eedee2;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Jost", "Avenir Next", "Segoe UI", sans-serif;
+  --font-script: "Parisienne", "Segoe Script", cursive;
+
+  --shadow-soft: 0 24px 60px -24px rgb(56 48 51 / 0.22);
+  --shadow-card: 0 12px 34px -14px rgb(56 48 51 / 0.16);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-blush);
+    color: var(--color-ink);
+  }
+  input,
+  select,
+  textarea {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .tracking-luxe {
+    letter-spacing: 0.3em;
+  }
+  .tracking-wide2 {
+    letter-spacing: 0.14em;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.75s ease-out both;
+  }
+  .delay-1 {
+    animation-delay: 0.12s;
+  }
+  .delay-2 {
+    animation-delay: 0.24s;
+  }
+  .delay-3 {
+    animation-delay: 0.36s;
+  }
+
+  @keyframes kenburns {
+    from {
+      transform: scale(1.07);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .animate-kenburns {
+    animation: kenburns 2.4s cubic-bezier(0.22, 0.8, 0.36, 1) both;
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .animate-slide-in {
+    animation: slideInRight 0.38s cubic-bezier(0.22, 0.8, 0.36, 1) both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out both;
+  }
+}
